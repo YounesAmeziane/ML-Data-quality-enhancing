@@ -1,0 +1,105 @@
+id,name,department,occupation,city,hire_date
+17492,Emily Chen,Cardiology,Registered Nurse,Vancouver,2021-03-15
+58321,Michael Wong,Emergency,Paramedic,Burnaby,2019-07-22
+92647,Sarah Johnson,Pediatrics,Medical Assistant,Surrey,2023-01-10
+35814,David Kim,Radiology,X-ray Technologist,Coquitlam,2018-11-05
+64029,Jessica Lee,Oncology,Registered Nurse,Vancouver,2020-09-18
+79235,Daniel Park,Surgery,Surgeon,Burnaby,2017-05-30
+12586,Olivia Smith,Mental Health,Psychologist,Surrey,2022-08-14
+48703,Ethan Brown,Pharmacy,Pharmacist,Coquitlam,2024-02-27
+63921,Sophia Garcia,Neurology,Neurologist,Vancouver,2019-12-03
+85472,Jacob Wilson,ICU,Respiratory Therapist,Burnaby,2021-06-19
+30759,Emma Martinez,Cardiology,Cardiologist,Surrey,2018-04-22
+58214,Noah Anderson,Emergency,ER Nurse,Coquitlam,2023-09-15
+93647,Ava Taylor,Pediatrics,Pediatrician,Vancouver,2020-11-28
+41852,Liam Thomas,Radiology,MRI Technologist,Burnaby,2022-05-07
+75931,Mia Rodriguez,Oncology,Oncology Nurse,Surrey,2019-08-11
+28465,James White,Surgery,Surgical Technologist,Coquitlam,2021-02-23
+65398,Charlotte Lee,Mental Health,Clinical Social Worker,Vancouver,2017-10-16
+82741,Benjamin Harris,Pharmacy,Pharmacy Technician,Burnaby,2024-01-09
+39572,Amelia Clark,Neurology,EEG Technologist,Surrey,2020-07-24
+51863,Lucas Green,ICU,ICU Nurse,Coquitlam,2023-04-18
+74295,Harper Adams,Cardiology,Echocardiographer,Vancouver,2018-12-05
+16934,Matthew Scott,Emergency,EMT,Burnaby,2022-09-30
+48521,Abigail Young,Pediatrics,Pediatric Nurse,Surrey,2019-05-12
+87632,Jackson Hall,Radiology,CT Technologist,Coquitlam,2021-11-21
+31459,Elizabeth King,Oncology,Radiation Therapist,Vancouver,2017-06-14
+72843,Samuel Baker,Surgery,Anesthesiologist,Burnaby,2020-03-27
+59176,Scarlett Wright,Mental Health,Psychiatric Nurse,Surrey,2023-08-08
+84235,Joseph Allen,Pharmacy,Pharmacy Assistant,Coquitlam,2019-02-19
+36794,Victoria Hill,Neurology,Neurosurgeon,Vancouver,2022-01-25
+51982,Christopher Carter,ICU,Intensivist,Burnaby,2018-07-31
+68327,Zoey Perez,Cardiology,Cardiac Nurse,Surrey,2021-04-12
+92456,Andrew Sanchez,Emergency,ER Physician,Coquitlam,2020-10-05
+15738,Madison Cook,Pediatrics,Pediatric Radiologist,Vancouver,2023-03-28
+73952,Avery Ward,Oncology,Hematologist,Surrey,2022-06-09
+58246,David Bell,Surgery,OR Nurse,Coquitlam,2019-11-22
+31579,Sofia Cooper,Mental Health,Art Therapist,Vancouver,2021-08-15
+86742,Anthony Rivera,Pharmacy,Clinical Pharmacist,Burnaby,2018-05-18
+49263,Chloe Brooks,Neurology,Neurology Nurse,Surrey,2023-11-30
+75831,Christopher Gray,ICU,ICU Director,Coquitlam,2020-02-14
+18362,Addison Hughes,Cardiology,Cardiac Sonographer,Vancouver,2022-12-07
+52694,Jonathan Long,Emergency,Trauma Nurse,Burnaby,2017-04-20
+39781,Lily Foster,Pediatrics,Neonatal Nurse,Surrey,2021-09-23
+84256,Ryan Butler,Radiology,Nuclear Medicine Tech,Coquitlam,2019-06-17
+61943,Natalie Diaz,Oncology,Palliative Care Nurse,Vancouver,2023-05-29
+27538,Thomas Price,Surgery,Plastic Surgeon,Burnaby,2018-10-12
+68492,Hannah Bennett,Mental Health,Marriage Counselor,Surrey,2022-07-25
+93157,Christian Wood,Pharmacy,Oncology Pharmacist,Coquitlam,2020-01-08
+46825,Aubrey Rivera,Neurology,Neurophysiologist,Vancouver,2021-12-19
+75392,Levi Watson,ICU,Paramedic,Burnaby,2019-03-26
+58246,David Bell,Surgery,OR Nurse,Coquitlam,2019-11-22
+31579,Sofia Cooper,Mental Health,Art Therapist,Vancouver,2021-08-15
+86742,Anthony Rivera,Pharmacy,Clinical Pharmacist,Burnaby,2018-05-18
+39781,Lily Foster,Pediatrics,Neonatal Nurse,Surrey,2021-09-23
+84256,Ryan Butler,Radiology,Nuclear Medicine Tech,Coquitlam,2019-06-17
+17492,Emily Chen,Cardiology,Registered Nurse,Vancouver,2021-03-15
+58321,Michael Wong,Emergency,Paramedic,Burnaby,2019-07-22
+92647,Sarah Johnson,Pediatrics,Medical Assistant,Surrey,2023-01-10
+35814,David Kim,Radiology,X-ray Technologist,Coquitlam,2018-11-05
+64029,Jessica Lee,Oncology,Registered Nurse,Vancouver,2020-09-18
+79235,Daniel Park,Surgery,Surgeon,Burnaby,2017-05-30
+12586,Olivia Smith,Mental Health,Psychologist,Surrey,2022-08-14
+48703,Ethan Brown,Pharmacy,Pharmacist,Coquitlam,2024-02-27
+63921,Sophia Garcia,Neurology,Neurologist,Vancouver,2019-12-03
+85472,Jacob Wilson,ICU,Respiratory Therapist,Burnaby,2021-06-19
+30759,Emma Martinez,Cardiology,Cardiologist,Surrey,2018-04-22
+58214,Noah Anderson,Emergency,ER Nurse,Coquitlam,2023-09-15
+93647,Ava Taylor,Pediatrics,Pediatrician,Vancouver,2020-11-28
+41852,Liam Thomas,Radiology,MRI Technologist,Burnaby,2022-05-07
+75931,Mia Rodriguez,Oncology,Oncology Nurse,Surrey,2019-08-11
+28465,James White,Surgery,Surgical Technologist,Coquitlam,2021-02-23
+65398,Charlotte Lee,Mental Health,Clinical Social Worker,Vancouver,2017-10-16
+82741,Benjamin Harris,Pharmacy,Pharmacy Technician,Burnaby,2024-01-09
+39572,Amelia Clark,Neurology,EEG Technologist,Surrey,2020-07-24
+51863,Lucas Green,ICU,ICU Nurse,Coquitlam,2023-04-18
+74295,Harper Adams,Cardiology,Echocardiographer,Vancouver,2018-12-05
+16934,Matthew Scott,Emergency,EMT,Burnaby,2022-09-30
+48521,Abigail Young,Pediatrics,Pediatric Nurse,Surrey,2019-05-12
+87632,Jackson Hall,Radiology,CT Technologist,Coquitlam,2021-11-21
+31459,Elizabeth King,Oncology,Radiation Therapist,Vancouver,2017-06-14
+72843,Samuel Baker,Surgery,Anesthesiologist,Burnaby,2020-03-27
+59176,Scarlett Wright,Mental Health,Dental Hygienist,Surrey,2023-08-08
+84235,Joseph Allen,Pharmacy,Pharmacy Assistant,Coquitlam,2019-02-19
+36794,Victoria Hill,Neurology,Neurosurgeon,Vancouver,2022-01-25
+51982,Christopher Carter,ICU,Intensivist,Burnaby,2018-07-31
+68327,Zoey Perez,Cardiology,Cardiac Nurse,Surrey,2021-04-12
+92456,Andrew Sanchez,Emergency,ER Physician,Coquitlam,2020-10-05
+15738,Madison Cook,Pediatrics,Pediatric Radiologist,Vancouver,2023-03-28
+48621,Julian Morris,Radiology,Ultrasound Technologist,Burnaby,2017-09-16
+73952,Avery Ward,Oncology,Hematologist,Surrey,2022-06-09
+58246,David Bell,Surgery,OR Nurse,Coquitlam,2019-11-22
+31579,Sofia Cooper,Mental Health,Art Therapist,Vancouver,2021-08-15
+86742,Anthony Rivera,Pharmacy,Clinical Pharmacist,Burnaby,2018-05-18
+49263,Chloe Brooks,Neurology,Neurology Nurse,Surrey,2023-11-30
+75831,Christopher Gray,ICU,ICU Director,Coquitlam,2020-02-14
+18362,Addison Hughes,Cardiology,Cardiac Sonographer,Vancouver,2022-12-07
+52694,Jonathan Long,Emergency,Trauma Nurse,Burnaby,2017-04-20
+39781,Lily Foster,Pediatrics,Neonatal Nurse,Surrey,2021-09-23
+84256,Ryan Butler,Radiology,Nuclear Medicine Tech,Coquitlam,2019-06-17
+61943,Natalie Diaz,Oncology,Palliative Care Nurse,Vancouver,2023-05-29
+27538,Thomas Price,Surgery,Plastic Surgeon,Burnaby,2018-10-12
+68492,Hannah Bennett,Mental Health,Marriage Counselor,Surrey,2022-07-25
+93157,Christian Wood,Pharmacy,Oncology Pharmacist,Coquitlam,2020-01-08
+46825,Aubrey Rivera,Neurology,Neurophysiologist,Vancouver,2021-12-19
+75392,Levi Watson,ICU,Paramedic,Burnaby,2019-03-26

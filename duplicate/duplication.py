@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-def duplication(data):
+def duplication(data, file_path):
     
     try:
         df = data
@@ -29,7 +29,7 @@ def duplication(data):
             df = df[df[selected_col].isin(filtered_values.keys())]
             df = df.drop_duplicates(subset=[selected_col], keep='first')
             
-            base_filename = os.path.basename(data)
+            base_filename = os.path.basename(file_path)
             output_file = "filtered_" + base_filename
             
             df.to_csv(output_file, index=False)

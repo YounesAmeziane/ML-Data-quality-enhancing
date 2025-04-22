@@ -41,7 +41,7 @@ if 'data' in locals():
 if feature_selected == features[0]:
     anomaly_detection(data)
 elif feature_selected == features[1]:
-    duplication(data)
+    duplication(data, file_path)
 elif feature_selected == features[2]:
     missing_values(data)
 else:
