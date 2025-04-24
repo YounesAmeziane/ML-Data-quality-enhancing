@@ -26,9 +26,12 @@ def anomaly_detection(data):
 
     print("\nFinal columns:")
     for i in df.columns:
-            print(f"- {i}")
+        print(f"- {i}")
 
-    features = ['salary', 'years_at_company', 'performance_score', 'leave_days']
+    # Dynamically set features based on the remaining columns
+    non_feature_columns = ['anomaly_score', 'anomaly_label']
+    features = [col for col in df.columns if col not in non_feature_columns]
+
     X = df[features]
 
     # Scaling the data
@@ -42,18 +45,15 @@ def anomaly_detection(data):
     df['anomaly_score'] = model.decision_function(X_scaled)
 
     # anomaly label based on the original prediction
-    df['anomaly_label'] = [
-        'Anomaly' if score == -1 else 'Normal' for score in anomaly_scores
-    ]
+    df['anomaly_label'] = ['Anomaly' if score == -1 else 'Normal' for score in anomaly_scores]
 
     print('Results with Anomaly Scores:')
     print(df[['anomaly_label', 'anomaly_score'] + features].head())  # scores with labels and features
 
-    ranked_anomalies = df[df['anomaly_label'] == 'Anomaly'].sort_values(
-        by='anomaly_score'
-    )
+    ranked_anomalies = df[df['anomaly_label'] == 'Anomaly'].sort_values(by='anomaly_score')
     print('\nRanked Anomalies (most anomalous first):')
     print(ranked_anomalies[['anomaly_label', 'anomaly_score'] + features])
+
     anomaly_count = (df['anomaly_label'] == 'Anomaly').sum()
     print(f'Total number of anomalies: {anomaly_count}')
 

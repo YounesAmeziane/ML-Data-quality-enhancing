@@ -7,18 +7,6 @@ from tqdm import tqdm
 import warnings
 
 def missing_values(df, output_path="synthetic_dataset_imputed.csv", vif_threshold=10):
-    """
-    Handle missing values in a DataFrame using Random Forest imputation,
-    with multicollinearity checking and categorical encoding preservation.
-    
-    Parameters:
-        df (pd.DataFrame): Input DataFrame with missing values
-        output_path (str): Path to save the cleaned dataset
-        vif_threshold (float): Threshold for multicollinearity detection
-        
-    Returns:
-        pd.DataFrame: DataFrame with imputed values
-    """
     # Suppress sklearn warnings
     warnings.filterwarnings('ignore', category=UserWarning)
     
