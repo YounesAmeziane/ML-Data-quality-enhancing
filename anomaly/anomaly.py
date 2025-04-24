@@ -28,27 +28,23 @@ def anomaly_detection(data):
     for i in df.columns:
         print(f"- {i}")
 
-    # Dynamically set features based on the remaining columns
     non_feature_columns = ['anomaly_score', 'anomaly_label']
     features = [col for col in df.columns if col not in non_feature_columns]
 
     X = df[features]
 
-    # Scaling the data
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
-    # Training Isolation Forest and get anomaly scores
     model = IsolationForest(n_estimators=100, contamination=0.05, random_state=42)
     anomaly_scores = model.fit_predict(X_scaled)
 
     df['anomaly_score'] = model.decision_function(X_scaled)
 
-    # anomaly label based on the original prediction
     df['anomaly_label'] = ['Anomaly' if score == -1 else 'Normal' for score in anomaly_scores]
 
     print('Results with Anomaly Scores:')
-    print(df[['anomaly_label', 'anomaly_score'] + features].head())  # scores with labels and features
+    print(df[['anomaly_label', 'anomaly_score'] + features].head())
 
     ranked_anomalies = df[df['anomaly_label'] == 'Anomaly'].sort_values(by='anomaly_score')
     print('\nRanked Anomalies (most anomalous first):')
