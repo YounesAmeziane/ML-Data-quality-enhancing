@@ -64,6 +64,27 @@ Install Dependencies:
 pip install -r requirements.txt
 ```
 
+---
+
+## Usage
+1. Ensure that your CSV dataset is located in the `/data` directory of the project
+2. Open a terminal in the project root and execute the following command:
+   ```
+   python main.py
+   ```
+3. Follow the steps
+   - Enter `1` to perform **Anomaly Detection**
+   - Enter `2` to apply **Duplicate Cleaning**
+   - Enter `3` to conduct **Missing Value Prediction**
+  
+## Examples
+Let's perform an anomaly detection on the `data.csv` dataset existing in `/data`
+1. **Step 1**:
+   - Run the project
+2. **Step 2**
+   - Enter `data.csv` when the project asks for the dataset
+3. **Step 3**
+   - Select `1` to run the anomaly detection function
 
 
 
