@@ -2,7 +2,7 @@
 A Python-based toolkit designed to assess and improve the quality of datasets used in machine learning (ML) pipelines. By identifying and addressing common data issues, this tool aims to enhance model performance and reliability.
 
 Developed by: **Younes Ameziane**  
-Date: **November 2024**
+Date: **March 2025**
 
 ---
 
