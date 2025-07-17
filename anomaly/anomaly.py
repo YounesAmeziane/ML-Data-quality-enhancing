@@ -36,7 +36,7 @@ def anomaly_detection(data):
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
-    model = IsolationForest(n_estimators=100, contamination=0.05, random_state=42)
+    model = IsolationForest(n_estimators=100, contamination=0.1, random_state=42)
     anomaly_scores = model.fit_predict(X_scaled)
 
     df['anomaly_score'] = model.decision_function(X_scaled)

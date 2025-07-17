@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd # type: ignore
 import os
 from anomaly.anomaly import anomaly_detection
 from duplicate.duplication import duplication
@@ -16,6 +16,18 @@ while True:
         print('Data loaded succesfully.\n')
         print('Here is the head of the file: ')
         print(data.head())
+        def get_data(df):
+            columns = df.shape[1]
+            rows = df.shape[0]
+            total_missing = df.isnull().sum().sum()
+            return {
+                'columns': columns,
+                'rows': rows,
+                'total_missing': total_missing
+            }
+        print('Data summary:')
+        summary = get_data(data)
+        print(f"Columns: {summary['columns']}, Rows: {summary['rows']}, Total Missing Values: {summary['total_missing']}")
         break
     else:
         print('File does not exist. Please enter an existing file name.')

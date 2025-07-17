@@ -85,17 +85,3 @@ Let's perform an anomaly detection on the `data.csv` dataset existing in `/data`
    - Enter `data.csv` when the project asks for the dataset
 3. **Step 3**
    - Select `1` to run the anomaly detection function
-
-
-
-
-
-
-
-
-
-
-
-
-
-

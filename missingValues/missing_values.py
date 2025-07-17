@@ -7,10 +7,9 @@ from tqdm import tqdm
 import warnings
 
 def missing_values(df, output_path="synthetic_dataset_imputed.csv", vif_threshold=10):
-    # Suppress sklearn warnings
+    # sklearn warnings
     warnings.filterwarnings('ignore', category=UserWarning)
     
-    # Input validation
     if df.empty:
         print("⚠️ Empty DataFrame provided!")
         return df
@@ -20,7 +19,7 @@ def missing_values(df, output_path="synthetic_dataset_imputed.csv", vif_threshol
     print(f"• Columns: {len(df.columns)}")
     print(f"• Total missing values: {df.isnull().sum().sum()}\n")
     
-    # Let user select columns to process
+    # Column selection
     print("Available columns:")
     for i, col in enumerate(df.columns):
         print(f"{i+1}. {col} (Missing: {df[col].isnull().sum()})")
@@ -33,17 +32,14 @@ def missing_values(df, output_path="synthetic_dataset_imputed.csv", vif_threshol
         except (ValueError, IndexError):
             print("⚠️ Invalid selection. Processing all columns.")
     
-    # Prepare data structures
     original_dtypes = df.dtypes.to_dict()
     num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
     cat_cols = df.select_dtypes(exclude=[np.number]).columns.tolist()
     label_encoders = {}
 
-    # Step 1: Encode Categorical Variables
     print("\nEncoding categorical columns...")
     for col in cat_cols:
         if df[col].isnull().sum() > 0:
-            # Add special category for missing values before encoding
             df[col] = df[col].astype(str).replace('nan', 'MISSING')
         
         le = LabelEncoder()
@@ -51,14 +47,12 @@ def missing_values(df, output_path="synthetic_dataset_imputed.csv", vif_threshol
         label_encoders[col] = le
     print("✅ Encoding complete.")
 
-    # Step 2: Random Forest Imputation
     print("\nStarting Random Forest Imputation...")
     df_imputed = df.copy()
     
     for col in tqdm(df_imputed.columns, desc="Imputing"):
         if df_imputed[col].isnull().sum() > 0:
             try:
-                # Prepare training data
                 X_train = df_imputed[df_imputed[col].notnull()].drop(col, axis=1)
                 y_train = df_imputed.loc[df_imputed[col].notnull(), col]
                 X_test = df_imputed[df_imputed[col].isnull()].drop(col, axis=1)
@@ -67,7 +61,6 @@ def missing_values(df, output_path="synthetic_dataset_imputed.csv", vif_threshol
                     print(f"⚠️ Column '{col}' skipped - no valid training data")
                     continue
 
-                # Select appropriate model
                 model = (RandomForestRegressor(n_estimators=100, random_state=42) 
                          if col in num_cols 
                          else RandomForestClassifier(n_estimators=100, random_state=42))
@@ -83,7 +76,7 @@ def missing_values(df, output_path="synthetic_dataset_imputed.csv", vif_threshol
     print("\n🎯 Imputation complete.")
     print(f"• Remaining missing values: {df_imputed.isnull().sum().sum()}")
 
-    # Step 3: Restore Original Data Types and Labels
+    # Restoring Original Data Types and Labels
     print("\nRestoring original formats...")
     for col, dtype in original_dtypes.items():
         if col in df_imputed.columns:
@@ -92,16 +85,14 @@ def missing_values(df, output_path="synthetic_dataset_imputed.csv", vif_threshol
                 le = label_encoders.get(col)
                 if le:
                     df_imputed[col] = le.inverse_transform(df_imputed[col].astype(int))
-                    # Convert back to original dtype if possible
                     try:
                         df_imputed[col] = df_imputed[col].astype(dtype)
                     except (ValueError, TypeError):
                         pass
             else:
-                # Convert numerical columns
                 df_imputed[col] = df_imputed[col].astype(dtype)
 
-    # Step 4: Multicollinearity Check (VIF)
+    # Multicollinearity Check (VIF)
     print("\nChecking multicollinearity...")
     numeric_cols = df_imputed.select_dtypes(include=[np.number]).columns.tolist()
     
@@ -113,7 +104,6 @@ def missing_values(df, output_path="synthetic_dataset_imputed.csv", vif_threshol
                 vif_data = pd.DataFrame()
                 vif_data["Feature"] = data_clean.columns
                 
-                # Calculate VIF for each feature
                 vif_list = []
                 for i in range(min(data_clean.shape[1], data_clean.shape[0]-1)):
                     try:
@@ -137,7 +127,6 @@ def missing_values(df, output_path="synthetic_dataset_imputed.csv", vif_threshol
     else:
         print("⚠️ Not enough numeric columns for VIF analysis")
 
-    # Step 5: Save Results
     try:
         df_imputed.to_csv(output_path, index=False)
         print(f"\nCleaned data saved to: {output_path}")
